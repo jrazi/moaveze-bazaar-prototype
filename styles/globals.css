@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 body {
+	direction: rtl;
+	text-direction: rtl;
 	@apply min-h-screen select-none bg-zinc-50 text-zinc-900 antialiased p-safe dark:bg-zinc-900 dark:text-zinc-50;
 
 	/* PWA enhancements */
