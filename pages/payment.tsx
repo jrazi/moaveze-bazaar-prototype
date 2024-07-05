@@ -3,12 +3,12 @@ import Section from '@/components/section'
 import { useRouter } from 'next/router'
 
 const Payment = () => {
-	const router = useRouter()
+	const { query, push } = useRouter()
 
-	const handleBackButtonClick = () => {
-		router.push({
+	const handleBackButtonClick = () => {    
+		push({
 			pathname: '/results',
-			query: { isPaid: true },
+			query: { ...query, isPaid: true },
 		})
 	}
 

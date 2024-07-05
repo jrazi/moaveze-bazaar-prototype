@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import React from 'react'
 
 interface PostCardProps {
@@ -6,6 +7,7 @@ interface PostCardProps {
 	price: number
 	imageUrl: string
 	isPaid: boolean
+	link: string
 }
 
 const PostCard: React.FC<PostCardProps> = ({
@@ -14,9 +16,21 @@ const PostCard: React.FC<PostCardProps> = ({
 	price,
 	imageUrl,
 	isPaid,
+	link,
 }) => {
+	const { push } = useRouter()
+	const clickHandler = () => {
+		if (!isPaid) {
+			alert('پرداختی انجام نشده است')
+			return
+		}
+		push(link)
+	}
 	return (
-		<div className='max-w-sm rounded overflow-hidden shadow-lg bg-white dark:bg-zinc-800 m-2'>
+		<div
+			className='max-w-sm rounded overflow-hidden shadow-lg bg-white dark:bg-zinc-800 m-2'
+			onClick={clickHandler}
+		>
 			<div
 				className='w-full h-48 bg-cover bg-center'
 				style={{
