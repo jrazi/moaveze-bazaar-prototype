@@ -28,7 +28,9 @@ const Results = () => {
 	}, [router])
 
 	const handleBackButtonClick = () => {
-		router.back()
+		router.push({
+			pathname: '/',
+		})
 	}
 
 	const handlePaymentClick = () => {
