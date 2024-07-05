@@ -20,6 +20,13 @@ const imageUrls = [
 
 const Results = () => {
   const router = useRouter()
+  const [isPaid,setIsPaid] = useState(false)
+
+  useEffect(() => {
+    const res = router.query["isPaid"]?.toString()
+    setIsPaid(res === 'true')
+    
+  },[router])
 
   const handleBackButtonClick = () => {
     router.back()
@@ -80,6 +87,7 @@ const Results = () => {
               description={post.description}
               price={post.price}
               imageUrl={post.imageUrl}
+              isPaid={isPaid}
             />
           ))}
         </div>
