@@ -1,29 +1,8 @@
-import React from 'react'
 import Page from '@/components/page'
 import Section from '@/components/section'
+import Tag from '@/components/tag'
 import { useState } from 'react'
 import { Range, getTrackBackground } from 'react-range'
-
-
-interface TagProps {
-  label: string
-  isSelected: boolean
-  onClick: () => void
-}
-
-const Tag: React.FC<TagProps> = ({ label, isSelected, onClick }) => {
-  return (
-    <button
-      onClick={onClick}
-      className={`px-4 py-2 rounded-full border ${
-        isSelected ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'
-      }`}
-    >
-      {label}
-    </button>
-  )
-}
-
 
 const Index = () => {
   const [rangeValues, setRangeValues] = useState<[number, number]>([0, 10000000])
@@ -67,6 +46,7 @@ const Index = () => {
               step={100000}
               min={0}
               max={10000000}
+              rtl={true}
               onChange={(values: number[]) => setRangeValues([values[0], values[1]] as [number, number])}
               renderTrack={({ props, children }) => (
                 <div
@@ -89,7 +69,8 @@ const Index = () => {
                         values: rangeValues,
                         colors: ['#ccc', '#548BF4', '#ccc'],
                         min: 0,
-                        max: 10000000
+                        max: 10000000,
+                        rtl: true
                       }),
                       alignSelf: 'center'
                     }}
