@@ -1,7 +1,29 @@
+import React from 'react'
 import Page from '@/components/page'
 import Section from '@/components/section'
 import { useState } from 'react'
 import { Range, getTrackBackground } from 'react-range'
+
+
+interface TagProps {
+  label: string
+  isSelected: boolean
+  onClick: () => void
+}
+
+const Tag: React.FC<TagProps> = ({ label, isSelected, onClick }) => {
+  return (
+    <button
+      onClick={onClick}
+      className={`px-4 py-2 rounded-full border ${
+        isSelected ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'
+      }`}
+    >
+      {label}
+    </button>
+  )
+}
+
 
 const Index = () => {
   const [rangeValues, setRangeValues] = useState<[number, number]>([0, 10000000])
@@ -112,16 +134,12 @@ const Index = () => {
           </p>
           <div className='mt-2 grid grid-cols-2 gap-2'>
             {categories.map((category) => (
-              <label key={category} className='flex items-center'>
-                <input
-                  type='checkbox'
-                  value={category}
-                  checked={selectedCategories.includes(category)}
-                  onChange={() => handleCategoryChange(category)}
-                  className='ml-2'
-                />
-                {category}
-              </label>
+              <Tag
+                key={category}
+                label={category}
+                isSelected={selectedCategories.includes(category)}
+                onClick={() => handleCategoryChange(category)}
+              />
             ))}
           </div>
         </div>
