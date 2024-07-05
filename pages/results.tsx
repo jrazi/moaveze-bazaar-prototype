@@ -17,11 +17,16 @@ const imageUrls = [
   'https://s100.divarcdn.com/static/photo/afra/post/S9SHtUh8hg1955dsOZF2Fg/97adf8f2-f5bf-4835-b88e-e51ac18f17cf.jpg'
 ]
 
+
 const Results = () => {
   const router = useRouter()
 
   const handleBackButtonClick = () => {
     router.back()
+  }
+
+  const handlePaymentClick = () => {
+    router.push('/payment')
   }
 
   const [numPosts, setNumPosts] = useState(0)
@@ -78,6 +83,27 @@ const Results = () => {
             />
           ))}
         </div>
+
+        <button
+          onClick={handlePaymentClick}
+          className="mt-8 px-6 py-3 bg-green-500 hover:bg-green-700 text-white font-bold text-lg rounded-full flex items-center justify-center"
+        >
+          <span className="ml-2">۵۰۰۰ تومان</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M12 8v4m0 4h.01M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"
+            />
+          </svg>
+        </button>
       </Section>
     </Page>
   )
