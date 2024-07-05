@@ -2,11 +2,13 @@ import Page from '@/components/page'
 import Section from '@/components/section'
 import Tag from '@/components/tag'
 import { useState } from 'react'
+import { useRouter } from 'next/router'
 import { Range, getTrackBackground } from 'react-range'
 
 const Index = () => {
   const [rangeValues, setRangeValues] = useState<[number, number]>([0, 10000000])
   const [selectedCategories, setSelectedCategories] = useState<string[]>([])
+  const router = useRouter()
 
   const categories: string[] = [
     'موبایل',
@@ -27,6 +29,10 @@ const Index = () => {
         ? prevCategories.filter((cat) => cat !== category)
         : [...prevCategories, category]
     )
+  }
+
+  const handleButtonClick = () => {
+    router.push('/results')
   }
 
   return (
@@ -126,6 +132,12 @@ const Index = () => {
         </div>
 
         <br />
+
+		<button
+          className='mb-4 px-6 py-2 bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-full'
+          onClick={handleButtonClick}>
+          نمایش نتایج
+        </button>
 
         <p className='text-sm text-zinc-600 dark:text-zinc-400 text-right'>
           این صفحه برای کمک به انتخاب بهترین معاملات طراحی شده است. با وارد کردن
