@@ -110,7 +110,8 @@ const Results = () => {
 				{posts && (
 					<p className='mt-4 text-zinc-600 dark:text-zinc-400'>
 						{posts.length} پست برای مبادله باز است و آیتم‌های دلخواه شما به طور
-						متقابل مطابقت نزدیک دارند. آیا می‌خواهید این پست‌ها را باز کنید؟
+						متقابل مطابقت نزدیک دارند.
+						{!isPaid && <span> آیا می‌خواهید این پست‌ها را باز کنید؟</span>}
 					</p>
 				)}
 
@@ -128,26 +129,28 @@ const Results = () => {
 					))}
 				</div>
 
-				<button
-					onClick={handlePaymentClick}
-					className='mt-8 px-6 py-3 bg-green-500 hover:bg-green-700 text-white font-bold text-lg rounded-full flex items-center justify-center'
-				>
-					<span className='ml-2'>۵۰۰۰ تومان</span>
-					<svg
-						xmlns='http://www.w3.org/2000/svg'
-						fill='none'
-						viewBox='0 0 24 24'
-						stroke='currentColor'
-						className='w-6 h-6'
+				{!isPaid && (
+					<button
+						onClick={handlePaymentClick}
+						className='mt-8 px-6 py-3 bg-green-500 hover:bg-green-700 text-white font-bold text-lg rounded-full flex items-center justify-center'
 					>
-						<path
-							strokeLinecap='round'
-							strokeLinejoin='round'
-							strokeWidth='2'
-							d='M12 8v4m0 4h.01M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z'
-						/>
-					</svg>
-				</button>
+						<span className='ml-2'>۵۰۰۰ تومان</span>
+						<svg
+							xmlns='http://www.w3.org/2000/svg'
+							fill='none'
+							viewBox='0 0 24 24'
+							stroke='currentColor'
+							className='w-6 h-6'
+						>
+							<path
+								strokeLinecap='round'
+								strokeLinejoin='round'
+								strokeWidth='2'
+								d='M12 8v4m0 4h.01M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z'
+							/>
+						</svg>
+					</button>
+				)}
 			</Section>
 		</Page>
 	)
