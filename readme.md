@@ -1,56 +1,100 @@
-<p align="center">
-	<img alt="Rice Bowl" src="public/images/icon-512.png" width="90">
-	<h2 align="center">Next PWA Template</h2>
-</p>
+# Moaveze Bazaar
 
-<p align="center">Fluffless app template to inspire less</p>
+Moaveze Bazaar is a prototype add-on for the Divar application, developed during the "Kenar Divar" hackathon at Sharif University of Technology in June 2024. This project aims to enhance the Divar platform by facilitating the trade of goods and services through a preference-based marketplace.
 
-<p align="center">
-	<a href="https://next-pwa-template.now.sh">Live demo</a>
-</p>
+## Table of Contents
 
-<p align="center">
-	<a href="https://web.dev/measure">
-		<img alt="100% lighthouse scores" src="https://img.shields.io/badge/lighthouse-100%25-845EF7.svg?logo=lighthouse&logoColor=white&style=flat-square" />
-	</a>
-</p>
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Technology Stack](#technology-stack)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [License](#license)
+- [Team Members](#team-members)
+- [Useful Links](#useful-links)
+
+## Project Overview
+
+Moaveze Bazaar is designed as an add-on for the Divar application, introducing a marketplace where users can trade goods and services based on their preferences. The prototype demonstrates the concept of matching users' posts with potential buyers' preferences, including specific items and price ranges.
 
 ## Features
 
-- ✨ Fluffless PWA using Next 13
-- 🌗 Lovely night/day themes
-- 🦄 Easily removable [nice-to-haves](#use-only-what-you-need)
-- 📱 Native-like mobile experience
-- 📦 Neatly wrapped like that avocado you got for christmas
+- User opt-in for the marketplace feature
+- Preference specification for desired items and price ranges
+- Matching algorithm to display relevant posts
+- Integration with the existing Divar application
 
-## Getting started
+## Technology Stack
 
-1. [Use this template](https://github.com/mvllow/next-pwa-template/generate)
-2. Replace `public/images` with your own
-3. Enjoy ✨
+- Next.js
+- Progressive Web App (PWA)
+- TypeScript
+- Tailwind CSS
 
-## Use only what you need
+## Getting Started
 
-Fluffless doesn't mean "start with nothing". The goal of this template is to be an entry into maintainable apps.
+### Prerequisites
 
-**The essentials**
+- Node.js (version 14 or later)
+- npm or yarn or pnpm
 
-- Typescript, made easy with Next.js
-- [tailwindcss](https://github.com/tailwindlabs/tailwindcss) for utility-first styling
-- [next-pwa](https://github.com/shadowwalker/next-pwa) for offline support
+### Installation
 
-**Nice to haves**
+1. Clone the repository:
 
-- [next-themes](https://github.com/pacocoursey/next-themes) or similar for low stress theming
+	```bash
+	git clone https://github.com/your-username/moaveze-bazaar.git
+	```
 
-## Gallery
+2. Navigate to the project directory:
 
-### Desktop
+   ```bash
+   cd moaveze-bazaar
+   ```
 
-<img width="1728" alt="Rice Bowl PWA on macOS in dark mode" src="https://github.com/mvllow/next-pwa-template/assets/1474821/889bef1b-af58-4efa-b1f3-3ea021ec9760">
+3. Install dependencies:
 
-### Mobile
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   ```
 
-<img width="360" alt="Rice Bowl PWA on iOS in light mode" src="https://github.com/mvllow/next-pwa-template/assets/1474821/1f0fa36e-23c7-4bcf-aa6e-f447559cae62" />
+4. Run the development server:
 
-<img width="360" alt="Rice Bowl PWA on iOS in dark mode" src="https://github.com/mvllow/next-pwa-template/assets/1474821/2fac61d0-dc29-4022-8b39-003306f80fb4" />
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
+
+## License
+
+This project is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC 4.0). For more information, visit: https://creativecommons.org/licenses/by-nc/4.0/
+
+## Team Members
+
+**The Darkside of The Wall**
+
+- [Javad Razi](https://github.com/razi)
+- [Amir Reza Ashrafi](https://github.com/invok4r)
+- [Mahdi Hassanzadeh](https://github.com/hassanzadehmahdi)
+- [Mahdi Manouchehri](https://github.com/mahdimanouchehri)
+- [Saeed Bani-Nosrat](https://github.com/saeedbaninosrat)
+
+
+## Useful Links
+
+If you're interested in building add-ons to be integrated with Divar, these links might be of your interest:
+
+- [Kenar Divar Website](https://divar.ir/kenar)
+- [Developer documents for using Kenar Divar](https://github.com/divar-ir/kenar-docs)
+- [Kenar Divar SDK](https://github.com/divar-ir/kenar-api)
+- [A boilerplate Django project for creating Kenar Divar applications](https://github.com/divar-ir/kenar-boilerplate)
