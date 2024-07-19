@@ -13,6 +13,8 @@ Moaveze Bazaar is a prototype add-on for the Divar application, developed during
 - [License](#license)
 - [Team Members](#team-members)
 - [Useful Links](#useful-links)
+- [Acknowledgments](#acknowledgments)
+
 
 ## Project Overview
 
@@ -98,3 +100,11 @@ If you're interested in building add-ons to be integrated with Divar, these link
 - [Developer documents for using Kenar Divar](https://github.com/divar-ir/kenar-docs)
 - [Kenar Divar SDK](https://github.com/divar-ir/kenar-api)
 - [A boilerplate Django project for creating Kenar Divar applications](https://github.com/divar-ir/kenar-boilerplate)
+
+## Acknowledgments
+
+We would like to express our gratitude to:
+
+- The Divar team for organizing and facilitating the "Kenar Divar" hackathon. Their support, expertise, and assistance were invaluable.
+
+- [mvllow](https://github.com/mvllow) for their [next-pwa-template](https://github.com/mvllow/next-pwa-template) repository, which served as a valuable reference and starting point for our project structure.
